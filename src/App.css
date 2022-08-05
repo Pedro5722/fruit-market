@@ -1,11 +1,28 @@
-.container{
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #4b8b3b;
+  margin-bottom: 5rem;
+}
+
+header  img{
+  width: 10rem;
+}
+
+.fruitContainer{
   display:flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
+  width: 100%;
+  margin: 2rem
 }
 
 .cardContainer{
-  margin: 0.5rem;
-  background-color: #999;
+  margin: 2rem;
 
+}
+.fruitCard{
+  flex-direction: row;
 }
