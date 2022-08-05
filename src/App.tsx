@@ -21,10 +21,9 @@ function App() {
 
   return (
     <>
-    <div className="header">
-      <Header/>
-
-    </div>
+      <div className="header">
+        <Header />
+      </div>
       <div className="fruitContainer">
         {fruits.map((fruit) => (
           <FruitCard fruit={fruit} key={fruit.id} />
