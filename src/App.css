@@ -1,47 +1,22 @@
 html{
-  padding-top: none;
-  margin-top: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
   height: 100%;
 }
 body{
   background-color: #ddd;
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  background-color: #4b8b3b;
-  margin-top: none;
-  margin-bottom: 5rem;
-}
-
-header img {
-  width: 10rem;
-  margin: 0 auto;
-}
-
 .fruitContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 2rem;
   align-items: center;
 }
+.fruitContainer::after{
+  content: '';
+  flex: auto;
+}
 
-.cardContainer {
-  margin: 2rem;
-}
-.fruitCard {
-  flex-direction: row;
-  margin: 1rem;
-  width: 10rem;
-}
-.price{
-  font-weight: bold;
-}
-.fruitCard button {
-  font-size: 2rem;
-}

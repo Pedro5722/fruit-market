@@ -11,4 +11,7 @@ export type Fruit = {
     calories: number;
     sugar: number;
   };
+  imgLink: string;
 };
+
+export type Item = Fruit & { quantity: number };
