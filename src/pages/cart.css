@@ -1,9 +1,19 @@
+html{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+}
+body{
+  background-color: #ddd;
+}
 h2{
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   margin: 0px;
+  font-family: "roboto";
 }
 .shoppingBag{
   display: flex;
@@ -11,14 +21,27 @@ h2{
   justify-content: center;
   font-size: 2rem;
   flex-direction: row;
-}
-p{
-  margin:0 2rem;
-  
+  font-family: "roboto";
 }
 .buttons{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 3rem;
+  margin: 2rem;
+  padding-bottom: 5rem;
+}
+.buttons:visited{
+  text-decoration:none;
+}
+.cartItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.cartItems::after{
+  content: '';
+  flex: auto;
 }

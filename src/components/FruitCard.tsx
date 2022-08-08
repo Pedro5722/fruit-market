@@ -19,12 +19,14 @@ export function FruitCard({ fruit }: FruitCardProps) {
   const [quantity, setQuantity] = useState(0);
   const { addItem, removeItem, cart } = useCart();
 
+  const price = 5.0;
+
   const item = useMemo(() => {
     const itemFound = cart.find((currentItem) => currentItem.id === fruit.id);
 
     return itemFound ? itemFound : { ...fruit, quantity: 0 };
   }, [cart]);
-  
+
   const imgPath = `/src/assets/${fruit.name}Img.png`;
 
   return (
@@ -39,11 +41,9 @@ export function FruitCard({ fruit }: FruitCardProps) {
         />
         <div className="fruitCardDescription">
           <p>{fruit.name} 500g</p>
-          <p className="price">R$ 5,00</p>
-
+          <p className="price">R$ {price.toPrecision(3)}</p>
         </div>
-          <div className="quantity">
-
+        <div className="quantity">
           <CardActions>
             <Button
               disabled={item.quantity === 0}

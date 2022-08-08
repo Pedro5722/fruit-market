@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0px;
 }
 header {
@@ -10,19 +10,18 @@ header {
   margin-bottom: 5rem;
   height: 8rem;
 }
-.logo{
+.logo {
   display: flex;
-  flex:1;
+  flex: 1;
   justify-content: center;
   transform: scale(0.5);
 }
-.cart{
+.cart {
   display: flex;
   justify-content: flex-end;
   size: 4rem;
-  
 }
-.cart:visited{
+.cart:visited {
   fill: none;
   color: #fff;
 }

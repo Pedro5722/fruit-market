@@ -18,7 +18,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 
   function addItem(item: Item) {
     const updatedItem: Item = { ...item, quantity: item.quantity + 1 };
-    
+
     const updatedCart =
       item.quantity === 0
         ? [...cart, updatedItem]
@@ -41,7 +41,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     let updatedCart: Item[];
 
     if (item.quantity === 1) {
-      updatedCart = cart.filter((currentItem) => currentItem.id !== item.id);
+        updatedCart = cart.filter((currentItem) => currentItem.id !== item.id);
     } else {
       updatedCart = cart.map((currentItem) => {
         if (currentItem.id === item.id) {

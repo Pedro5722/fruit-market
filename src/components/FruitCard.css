@@ -1,29 +1,33 @@
-
 .fruitCard {
   flex-direction: row;
   margin: 1rem;
   width: 10rem;
 }
-
-.price{
+.price {
+  margin-top: 1rem;
   font-weight: bold;
 }
-.fruitCard button {
-  font-size: 2rem;
-}
-.fruitCardDescription{
-  width: 8rem;
-  height: 3rem;
-  margin-right: 1rem;
+.fruitCardDescription {
+  width: 10rem;
+  height: 5rem;
+  margin-top: 1rem;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
-.quantity{
+.fruitCardDescription p {
+  margin: 0px;
+  padding: 1rem;
+}
+.quantity {
   display: block;
   font-size: 1rem;
+  margin-top: 1rem;
   width: 3rem;
 }
 .quantity p {
   margin: 0px;
   padding: 0px;
+}
+.fruitCard button {
+  font-size: 2rem;
 }

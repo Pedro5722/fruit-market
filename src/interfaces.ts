@@ -11,6 +11,7 @@ export type Fruit = {
     calories: number;
     sugar: number;
   };
+  price: number;
   imgLink: string;
 };
 
