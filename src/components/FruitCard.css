@@ -1,33 +1,40 @@
-.fruitCard {
+html{
+  font-family: "roboto";
+}
+.cartfruitCard {
   flex-direction: row;
   margin: 1rem;
   width: 10rem;
 }
-.price {
+.cartprice {
   margin-top: 1rem;
   font-weight: bold;
 }
-.fruitCardDescription {
+.cartfruitCardDescription {
   width: 10rem;
   height: 5rem;
   margin-top: 1rem;
   align-items: center;
   justify-content: center;
 }
-.fruitCardDescription p {
-  margin: 0px;
-  padding: 1rem;
+.cartfruitCardDescription p {
+  padding-left: 1rem;
+  font-size: 1.1rem;
 }
-.quantity {
+.cartitemtotal{
+  margin-top: 2rem;
+}
+.cartquantity {
   display: block;
   font-size: 1rem;
   margin-top: 1rem;
-  width: 3rem;
+  width: 5rem;
 }
-.quantity p {
+.cartquantity p {
   margin: 0px;
   padding: 0px;
 }
-.fruitCard button {
+.cartfruitCard button {
   font-size: 2rem;
+  width: 5rem;
 }

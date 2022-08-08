@@ -4,6 +4,7 @@ import axios from "axios";
 import { Fruit } from "./interfaces";
 import { FruitCard } from "./components/FruitCard";
 import { Header } from "./components/Header";
+import { FruitCardWithNutrition } from "./components/FruitCardWithNutrition";
 
 function App() {
   const [fruits, setFruits] = useState<Fruit[]>([]);
@@ -26,7 +27,7 @@ function App() {
       </div>
       <div className="fruitContainer">
         {fruits.map((fruit) => (
-          <FruitCard fruit={fruit} key={fruit.id} />
+          <FruitCardWithNutrition fruit={fruit} key={fruit.id} />
         ))}
       </div>
     </>

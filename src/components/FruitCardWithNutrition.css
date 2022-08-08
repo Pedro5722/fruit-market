@@ -1,0 +1,53 @@
+html {
+  font-family: "roboto";
+}
+.fruitCard {
+  flex-direction: row;
+  margin: 1rem;
+  height: 14rem;
+  width: 25rem;
+  font-family: "roboto";
+}
+.price {
+  font-weight: bold;
+}
+.fruitCardDescription {
+  display: flex;
+  padding: 0 8px;
+  width: 10rem;
+  height: 2rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.fruitCardDescription p {
+  margin: 0px;
+  font-size: 0.9rem;
+}
+.nutritionalFacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 1rem;
+}
+.nutritionalFacts th {
+  text-align: left;
+}
+.nutritionalFacts th + th {
+  padding-left: 2rem;
+}
+.nutritionalFacts td + td {
+  padding-left: 2rem;
+}
+.quantity {
+  font-size: 1rem;
+}
+.quantity p {
+  margin: 0px;
+  padding: 0px;
+}
+.fruitCard button {
+  font-size: 1.5rem;
+}
+

@@ -9,18 +9,8 @@ import "./cart.css";
 import { useEffect, useState } from "react";
 
 export function Cart() {
-  const { cart } = useCart();
-  // const [totalPrice, setTotalPrice] = useState(0);
-
-  //   let subTotal = 0
-  //   useEffect(() => {
-  //     subTotal = 0
-  //     cart.map((currentItem) => {
-  //       return setTotalPrice(currentItem.price + totalPrice);
-  //     })
-  //   }, [cart])
-  
-  
+  const { cart, cartTotal } = useCart();
+ 
   return (
     <div>
       <Header />
@@ -35,7 +25,10 @@ export function Cart() {
         </div>
         <div className="subtotal">
           <p>
-            Subtotal:
+            Subtotal: { cartTotal.toLocaleString("pt-br", {
+              style: "currency",
+              currency: "BRL"
+            })}
           </p>
         </div>
 

@@ -45,3 +45,9 @@ h2{
   content: '';
   flex: auto;
 }
+.subtotal{
+  text-align: end;
+  margin-right: 2rem;
+  font-size: 2rem;
+  font-family: "roboto";
+}

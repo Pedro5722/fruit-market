@@ -16,10 +16,7 @@ interface FruitCardProps {
 }
 
 export function FruitCard({ fruit }: FruitCardProps) {
-  const [quantity, setQuantity] = useState(0);
   const { addItem, removeItem, cart } = useCart();
-
-  const price = 5.0;
 
   const item = useMemo(() => {
     const itemFound = cart.find((currentItem) => currentItem.id === fruit.id);
@@ -30,8 +27,8 @@ export function FruitCard({ fruit }: FruitCardProps) {
   const imgPath = `/src/assets/${fruit.name}Img.png`;
 
   return (
-    <div className="card">
-      <Card className="fruitCard">
+    <div className="cartcard">
+      <Card className="cartfruitCard">
         <CardMedia
           component="img"
           alt={fruit.name}
@@ -39,15 +36,28 @@ export function FruitCard({ fruit }: FruitCardProps) {
           src={fruit.imgLink}
           title={fruit.name}
         />
-        <div className="fruitCardDescription">
+        <div className="cartfruitCardDescription">
           <p>{fruit.name} 500g</p>
-          <p className="price">R$ {price.toPrecision(3)}</p>
+          <p className="cartprice">
+            {" "}
+            {fruit.price.toLocaleString("pt-br", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
+          <p className="cartitemtotal">
+            Total:{" "}
+            {(item.price * item.quantity).toLocaleString("pt-br", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </p>
         </div>
-        <div className="quantity">
+        <div className="cartquantity">
           <CardActions>
             <Button
               disabled={item.quantity === 0}
-              size="small"
+              size="large"
               onClick={() => removeItem(item)}
             >
               -

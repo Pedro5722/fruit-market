@@ -1,20 +1,30 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useMemo, useState } from "react";
 import { Item } from "../interfaces";
 
 interface CartContextData {
   addItem(item: Item): void;
   removeItem(item: Item): void;
   cart: Item[];
+  cartTotal: number;
 }
 
 interface CartProviderProps {
   children: ReactNode;
 }
 
+
 const CartContext = createContext<CartContextData>({} as CartContextData);
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState<Item[]>([]);
+
+  const cartTotal = useMemo(() => {
+    let value = 0;
+    cart.forEach((currentItem) => {
+      value += currentItem.price * currentItem.quantity 
+    })
+    return value
+  }, [cart]);
 
   function addItem(item: Item) {
     const updatedItem: Item = { ...item, quantity: item.quantity + 1 };
@@ -41,7 +51,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     let updatedCart: Item[];
 
     if (item.quantity === 1) {
-        updatedCart = cart.filter((currentItem) => currentItem.id !== item.id);
+      updatedCart = cart.filter((currentItem) => currentItem.id !== item.id);
     } else {
       updatedCart = cart.map((currentItem) => {
         if (currentItem.id === item.id) {
@@ -55,7 +65,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   }
 
   return (
-    <CartContext.Provider value={{ addItem, removeItem, cart }}>
+    <CartContext.Provider value={{ addItem, removeItem, cart, cartTotal }}>
       {children}
     </CartContext.Provider>
   );
